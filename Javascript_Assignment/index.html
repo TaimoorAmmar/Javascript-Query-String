@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <form id="myForm">
+    <label for="name">Name</label><br /><br/>
+    <input type="text" id="name" name="name" /><br /><br/>
+    <label for="email">Email</label><br /><br>
+    <input type="email" id="email" name="email" /><br /><br/>
+    <label for="dob">DOB</label><br /><br/>
+    <input type="date" id="dob" name="dob" /><br />
+    <br />
+
+    <label for="interest">Select your Interest</label><br /><br/>
+    <select name="interest" id="interest">
+      <option value="MERN">MERN</option>
+      <option value="SQA">SQA</option>
+    </select><br /><br/>
+
+    <label>Choose your favourite language</label><br /><br/>
+    <input type="radio" id="html" name="favourite" value="HTML" />
+    <label for="html">HTML</label><br />
+    <input type="radio" id="css" name="favourite" value="CSS" />
+    <label for="css">CSS</label><br />
+    <input type="radio" id="javascript" name="favourite" value="JavaScript" />
+    <label for="javascript">JavaScript</label> <br />
+    <br />
+
+    <input type="checkbox" id="individual" name="individual" />
+    <label for="individual">Individual</label>
+    <input type="checkbox" id="organization" name="organization" />
+    <label for="organization">Organization</label><br /><br/>
+
+    <label for="about-you">About you</label><br /><br/>
+    <textarea id="about-you" name="about-you"></textarea><br /><br/>
+  </form>
+  <input type="button" onclick="onSubmit()" id="submit" value="Submit" />
+
+ 
+  <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>

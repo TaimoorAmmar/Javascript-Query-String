@@ -1,0 +1,50 @@
+function onSubmit() {
+  // Initializing values in variables
+  let name = document.forms["myForm"]["name"].value;
+  let email = document.forms["myForm"]["email"].value;
+  let dob = document.forms["myForm"]["dob"].value;
+  let interest = document.forms["myForm"]["interest"].value;
+  let favourite = document.forms["myForm"]["favourite"].value;
+  let about_you = document.forms["myForm"]["about-you"].value;
+  let individual = document.forms["myForm"]["individual"].checked;
+  let organization = document.forms["myForm"]["organization"].checked;
+
+  // Validation
+  try {
+    if (name == "") throw "Name must be filled out";
+    if (email == "") throw "Email must be filled out";
+    if (dob == "") throw "DOB must be filled out";
+    if (interest == "") throw "Interest must be filled out";
+    if (favourite == "") throw "Favourite language must be filled out";
+    if (about_you == "") throw "About you must be filled out";
+  
+  } catch (err) {
+    alert(err);
+    if (err) {
+      return;
+    }
+  }
+  //QueryString
+  let params =
+    "?name=" +
+    name +
+    "&email=" +
+    email +
+    "&dob=" +
+    dob +
+    "&interest=" +
+    interest +
+    "&favourite=" +
+    favourite +
+    "&about-you=" +
+    about_you;
+  if (individual) {
+    params = params.concat("&individual=individual");
+  }
+  if (organization) {
+    params = params.concat("&organization=organization");
+  }
+  window.open(
+    "file:///C:/Users/4049/Desktop/Javascript_Assignment/summary.html" + params
+  );
+}

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        let url = window.location.href;
+        let params = (new URL(url)).searchParams;
+        document.write(params.get('name')+ '<br>');
+        document.write(params.get('email')+ '<br>');
+        document.write(params.get('dob')+ '<br>');
+        document.write(params.get('interest')+ '<br>');
+        document.write(params.get('favourite')+ '<br>');
+        document.write(params.get('individual')+ '<br>');
+        document.write(params.get('organization')+ '<br>');
+        document.write(params.get('about-you')+ '<br>');
+      
+        
+    </script>
+</body>
+</html>
+
